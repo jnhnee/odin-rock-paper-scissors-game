@@ -18,7 +18,7 @@ function getComputerChoice()
 
 function getHumanChoice()
 {
-    userChoice = window.prompt();
+    userChoice = window.prompt().toLowerCase();
     return userChoice;
 }
 
