@@ -4,15 +4,15 @@ function getComputerChoice()
 
     if(randomChoice == 0)
     {
-        return "Rock!";
+        return "rock";
     }
     else if(randomChoice == 1)
     {
-        return "Paper!";
+        return "paper";
     }
     else
     {
-        return "Scissors!";
+        return "scissors";
     }
 }
 
@@ -22,6 +22,27 @@ function getHumanChoice()
     return userChoice;
 }
 
+function playRound(humanChoice, computerChoice)
+{
+    if(humanChoice == "rock" && computerChoice == "scissors")
+    {
+        humanScore++;
+    }
+    else if(humanChoice == "rock" && computerChocie == "rock")
+    {
+        computerScore++;
+        humanScore++;
+    }
+    else if(humanChoice == "rock" && computerChoice == "paper")
+    {
+        computerScore++;
+    }
+}
+
 humanScore = 0;
 computerScore = 0;
+
+playRound(getHumanChoice(), getComputerChoice());
+console.log(computerScore);
+console.log(humanScore);
 
