@@ -1,19 +1,25 @@
 function getComputerChoice()
 {
-    randomChoice = Math.random() * 3
+    randomChoice = Math.random() * 3;
 
     if(randomChoice == 0)
     {
-        return "Rock!"
+        return "Rock!";
     }
     else if(randomChoice == 1)
     {
-        return "Paper!"
+        return "Paper!";
     }
     else
     {
-        return "Scissors!"
+        return "Scissors!";
     }
 }
 
-console.log(getComputerChoice());
+function getHumanChoice()
+{
+    userChoice = window.prompt();
+    return userChoice;
+}
+
+console.log(getHumanChoice());
