@@ -33,6 +33,16 @@ function playRound(humanChoice, computerChoice)
         computerScore++;
         humanScore++;
     }
+    else if(humanChoice == "paper" && computerChoice == "paper")
+    {
+        computerScore++;
+        humanScore++;
+    }
+    else if(humanChoice == "scissors" && computerChoice == "scissors")
+        {
+            computerScore++;
+            humanScore++;
+        }
     else if(humanChoice == "rock" && computerChoice == "paper")
     {
         computerScore++;
