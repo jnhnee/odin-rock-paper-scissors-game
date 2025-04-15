@@ -24,27 +24,18 @@ function getHumanChoice()
 
 function playRound(humanChoice, computerChoice)
 {
-    if(humanChoice == "rock" && computerChoice == "scissors")
+    if(humanChoice == computerChoice) 
     {
+        // no point
+    }
+    else if(
+        (humanChoice == "rock" && computerChoice == "scissors") ||
+        (humanChoice == "paper" && computerChoice == "rock") ||
+        (humanChoice == "scissors" && computerChoice == "paper")
+    ) {
         humanScore++;
     }
-    else if(humanChoice == "rock" && computerChocie == "rock")
-    {
-        computerScore++;
-        humanScore++;
-    }
-    else if(humanChoice == "paper" && computerChoice == "paper")
-    {
-        computerScore++;
-        humanScore++;
-    }
-    else if(humanChoice == "scissors" && computerChoice == "scissors")
-        {
-            computerScore++;
-            humanScore++;
-        }
-    else if(humanChoice == "rock" && computerChoice == "paper")
-    {
+    else {
         computerScore++;
     }
 }
