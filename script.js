@@ -34,9 +34,11 @@ function playRound(humanChoice, computerChoice)
         (humanChoice == "scissors" && computerChoice == "paper")
     ) {
         humanScore++;
+        console.log("You Win!");
     }
     else {
         computerScore++;
+        console.log("You lose!");
     }
 }
 
@@ -44,6 +46,6 @@ humanScore = 0;
 computerScore = 0;
 
 playRound(getHumanChoice(), getComputerChoice());
-console.log(computerScore);
-console.log(humanScore);
+console.log("Computer Score: " + computerScore);
+console.log("Your Score: " + humanScore);
 
