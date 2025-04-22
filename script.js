@@ -1,12 +1,12 @@
 function getComputerChoice()
 {
-    randomChoice = Math.random() * 3;
+    let randomChoice = Math.floor(Math.random() * 3);
 
-    if(randomChoice == 0)
+    if(randomChoice === 0)
     {
         return "rock";
     }
-    else if(randomChoice == 1)
+    else if(randomChoice === 1)
     {
         return "paper";
     }
@@ -47,8 +47,6 @@ function playGame()
     for(let i = 0; i < 5; i++)
     {
         playRound(getHumanChoice(), getComputerChoice());
-        console.log("Computer Score: " + computerScore);
-        console.log("Your Score: " + humanScore);
     }
 }
 
@@ -56,4 +54,6 @@ humanScore = 0;
 computerScore = 0;
 
 playGame();
+console.log("Computer Score: " + computerScore);
+console.log("Your Score: " + humanScore);
 
