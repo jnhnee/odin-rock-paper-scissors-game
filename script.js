@@ -26,7 +26,7 @@ function playRound(humanChoice, computerChoice)
 {
     if(humanChoice == computerChoice) 
     {
-        // no point
+        console.log("Tie!");
     }
     else if(
         (humanChoice == "rock" && computerChoice == "scissors") ||
@@ -42,10 +42,18 @@ function playRound(humanChoice, computerChoice)
     }
 }
 
+function playGame()
+{
+    for(let i = 0; i < 5; i++)
+    {
+        playRound(getHumanChoice(), getComputerChoice());
+        console.log("Computer Score: " + computerScore);
+        console.log("Your Score: " + humanScore);
+    }
+}
+
 humanScore = 0;
 computerScore = 0;
 
-playRound(getHumanChoice(), getComputerChoice());
-console.log("Computer Score: " + computerScore);
-console.log("Your Score: " + humanScore);
+playGame();
 
