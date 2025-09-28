@@ -8,8 +8,7 @@ const getComputerChoice = num => { //returns rock,paper,scissors given num
 
 let getHumanChoice = () => prompt("Enter: rock, paper, scissors").toLowerCase(); //prompts user for input
 
-
-let humanScore = 0, computerScore = 0;
+let humanScore = 0, computerScore = 0; //score vars
 
 const playRound = (humanChoice, computerChoice) => {
     if(humanChoice == "rock" && computerChoice == "scissors") {return (humanScore++, "You Won! Rock beats Scissors")}
@@ -18,12 +17,14 @@ const playRound = (humanChoice, computerChoice) => {
     else if(computerChoice == "rock" && humanChoice == "scissors") {return (computerScore++, "You Lose! Rock beats Scissors")}
     else if(computerChoice == "scissors" && humanChoice == "paper") {return (computerScore++, "You Lose! Scissors beats Paper")}
     else if(computerChoice == "paper" && humanChoice == "rock") {return (computerScore++, "You Lose! Paper beats Rock")}
-    else {return "Draw! No Score Added"}
+    else {return "Draw! No Points Added"}
 };
 
-console.log(playRound(getHumanChoice(), getComputerChoice(getNum123(3))));
-console.log(`Your Score: ${humanScore}\nComputer Score: ${computerScore}`);
-console.log(playRound(getHumanChoice(), getComputerChoice(getNum123(3))));
-console.log(`Your Score: ${humanScore}\nComputer Score: ${computerScore}`);
-console.log(playRound(getHumanChoice(), getComputerChoice(getNum123(3))));
-console.log(`Your Score: ${humanScore}\nComputer Score: ${computerScore}`);
+const playGame = () => { //repeats 5* playRound()
+    for(let i = 0; i < 5; i++) {
+        console.log(playRound(getHumanChoice(), getComputerChoice(getNum123(3))));
+    }
+    console.log(`Your Score: ${humanScore}\nComputer Score: ${computerScore}`);
+}
+
+playGame();
