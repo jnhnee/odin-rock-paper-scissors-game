@@ -6,6 +6,9 @@ const getComputerChoice = num => { //returns rock,paper,scissors given num
     else {return "paper"}
 };
 
+const getHumanChoice = () => prompt("Enter: rock, paper, scissors"); //prompts user for input
+
 console.log(getComputerChoice(getNum123(3)));
 console.log(getComputerChoice(getNum123(3)));
 console.log(getComputerChoice(getNum123(3)));
+getHumanChoice();
