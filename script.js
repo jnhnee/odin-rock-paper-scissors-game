@@ -8,7 +8,9 @@ const getComputerChoice = num => { //returns rock,paper,scissors given num
 
 const getHumanChoice = () => prompt("Enter: rock, paper, scissors"); //prompts user for input
 
-console.log(getComputerChoice(getNum123(3)));
-console.log(getComputerChoice(getNum123(3)));
+let humanScore = 0, computerScore = 0;
+
+
+
 console.log(getComputerChoice(getNum123(3)));
 getHumanChoice();
