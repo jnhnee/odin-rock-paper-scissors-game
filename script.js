@@ -6,11 +6,6 @@ const getComputerChoice = num => { //returns rock,paper,scissors given num
     else {return "paper"}
 };
 
-const getHumanChoice = () => prompt("Enter: rock, paper, scissors"); //prompts user for input
+const getHumanChoice = () => prompt("Enter: rock, paper, scissors").toLowerCase(); //prompts user for input
 
 let humanScore = 0, computerScore = 0;
-
-
-
-console.log(getComputerChoice(getNum123(3)));
-getHumanChoice();
